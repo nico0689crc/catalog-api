@@ -1,0 +1,191 @@
+{
+  "authorization": {
+    "token_without_authorization": "The user is not authorized to perform this action."
+  },
+  "validation_rules": {
+    "users_rules": {
+      "get_user_authentication": {
+        "email": "Email format is required.",
+        "password": "Must be at least 6 chars long"
+      },
+      "post_user": {
+        "name": "Must be at least 6 chars long",
+        "email": {
+          "email_format": "Must be e-mail format",
+          "unique_email": "There is an account registered already with this email address."
+        },
+        "password": "Must be at least 6 chars long"
+      },
+      "patch_user": {
+        "name": "Must be at least 6 chars long",
+        "email": {
+          "email_format": "Must be e-mail format",
+          "unique_email": "There is an account registered already with this email address."
+        }
+      }
+    },
+    "tags_rules": {
+      "post_tag": {
+        "name": "Must be at least 4 characters long."
+      },
+      "patch_tag": {
+        "name": "Must be at least 4 characters long."
+      }
+    },
+    "products_rules": {
+      "post_products": {
+        "name": "The product name must be at least 10 characters long.",
+        "description": "The product description must be at least 30 characters long.",
+        "quantity": "Quantity must be a number greater than 0.",
+        "price": "The price must be a decimal number."
+      },
+      "patch_products": {
+        "name": "The product name must be at least 10 characters long.",
+        "description": "The product description must be at least 30 characters long.",
+        "quantity": "Quantity must be a number greater than 0.",
+        "price": "The price must be a decimal number."
+      }
+    },
+    "categories_rules": {
+      "post_categories": {
+        "name": "The category name must be at least 10 characters long.",
+        "description": "The category description must be at least 30 characters long."
+      },
+      "patch_categories": {
+        "name": "The category name must be at least 10 characters long.",
+        "description": "The category description must be at least 30 characters long."
+      }
+    },
+    "comments_rules": {
+      "post_comment": {
+        "body": "The comment should not be empty.",
+        "product_not_found": "The product you are trying to comment on is not found at this time."
+      },
+      "patch_comment": {
+        "body": "The comment should not be empty.",
+        "product_not_found": "The product you are trying to comment on is not found at this time."
+      }
+    }
+  },
+  "middleware": {
+    "validators": {
+      "title": "Invalid attribute."
+    },
+    "unknown_endpoint": {
+      "title": "Route not found.",
+      "detail": "The requested path could not be found."
+    },
+    "check_valid_object_id": {
+      "title": "Invalid ID.",
+      "detail": "The received ID is not correct."
+    },
+    "resource_not_found": {
+      "title": "Resource not found.",
+      "detail": "The requested resource could not be retrieved."
+    },
+    "check_valid_token": {
+      "header_without_token": {
+        "title": "Token required.",
+        "detail": "The request was received without the required token."
+      },
+      "token_not_valid": {
+        "title": "Invalid token.",
+        "detail": "The request was received with an invalid token."
+      },
+      "not_authorization": {
+        "title": "Unauthorized.",
+        "detail": "The request is trying to perform an unauthorized action."
+      }
+    }
+  },
+  "services": {
+    "users_services": {
+      "get_users": {
+        "error_resource_not_found": "The users could not be processed.",
+        "resources_get_success": "The users have been retrieved successfully."
+      },
+      "get_user": {
+        "error_resource_not_found": "The user could not be processed.",
+        "resources_get_success": "The user has been retrieved successfully."
+      },
+      "get_user_authentication": {
+        "credential_incorrect": {
+          "title": "Credentials incorrect",
+          "detail": "User login credentials (email or password) are incorrect."
+        },
+        "user_activation_required": {
+          "title": "Your account requires activation",
+          "detail": "We have sent you a welcome email containing a link to activate your account. Please activate your account to be able to log in."
+        },
+        "user_actived_already": {
+          "title": "Your account has already been activated",
+          "detail": "Please go to the login form to access your account."
+        },
+        "user_token_expired": {
+          "title": "Your token has already been expired or used",
+          "detail": "Your password recovery token has apparently expired or been used. Request a new password."
+        },
+        "user_code_virification_wrong": {
+          "title": "Your verification link is not correct",
+          "detail": "Please check that your verification link is correct."
+        },
+        "user_locked": {
+          "title": "Blocked account",
+          "detail": "Your account is locked so you can't log in."
+        },
+        "authentication_success": "El usuario ha sido autenticado con éxito."
+      },
+      "create_user": {
+        "method_label": "User registration",
+        "create_success": "The user has been created successfully."
+      },
+      "update_user": {
+        "method_label": "User update",
+        "update_not_found": "The requested user is not found.",
+        "update_no_authorization": "The user is not authorized to perform this action.",
+        "update_success": "The user has been updated successfully."
+      },
+      "delete_user": {
+        "delete_not_found": "The requested user is not found.",
+        "delete_no_authorization": "The user is not authorized to perform this action.",
+        "delete_success": "The user has been deleted successfully."
+      }
+    },
+    "tags_services": {
+      "error_resource_not_found": "The requested Tag is not found.",
+      "delete_resource_with_relation": {
+        "title": "Tag with dependencies",
+        "detail": "The tag trying to remove have products related."
+      }
+    },
+    "products_services": {
+      "resource_not_found": "The requested resource was not found.",
+      "resource_not_created": "The resource could not be created."
+    },
+    "comments_services": {
+      "error_resource_not_found": "The requested comment is not found."
+    },
+    "categories_services": {
+      "error_resource_not_found": "The requested Category is not found.",
+      "delete_resource_with_relation": {
+        "title": "Product with dependencies",
+        "detail": "The category trying to remove have products related."
+      }
+    }
+  },
+
+  "emails": {
+    "registration": {
+      "subject": "Welcome email and account activation.",
+      "title": "We welcome you!",
+      "body": "Hi, userName : Thank you for creating an account with Catalog Project. You are just a few simple steps away from being able to start enjoying our services!. You just have to click on the activate account button.",
+      "button_label": "Activate your account"
+    },
+    "password-reset": {
+      "subject": "Please reset your password.",
+      "title": "Reset your Catalog Password",
+      "body": "userName, we heard that you lost your Catalog password. Sorry about that! But don’t worry! You can use the following button to reset your password",
+      "button_label": "Reset your password"
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "authorization": {
+    "token_without_authorization": "El usuario no está autorizado para realizar esta acción."
+  },
+  "validation_rules": {
+    "users_rules": {
+      "get_user_authentication": {
+        "email": "Formato de correo electronico es requerido.",
+        "password": "Debe tener al menos 6 caracteres."
+      },
+      "post_user": {
+        "name": "Debe tener al menos 6 caracteres.",
+        "email": {
+          "email_format": "Formato de correo electronico es requerido.",
+          "unique_email": "Ya hay una cuenta registrada con esta dirección de correo electrónico."
+        },
+        "password": "Debe tener al menos 6 caracteres."
+      },
+      "patch_user": {
+        "name": "Debe tener al menos 6 caracteres.",
+        "email": {
+          "email_format": "Formato de correo electronico es requerido.",
+          "unique_email": "Ya hay una cuenta registrada con esta dirección de correo electrónico."
+        }
+      }
+    },
+    "tags_rules": {
+      "post_tag": {
+        "name": "Debe tener al menos 4 caracteres."
+      },
+      "patch_tag": {
+        "name": "Debe tener al menos 4 caracteres."
+      }
+    },
+    "products_rules": {
+      "post_products": {
+        "name": "El nombre del producto debe tener al menos 10 caracteres.",
+        "description": "La descripción del producto debe tener al menos 30 caracteres.",
+        "quantity": "La cantidad debe ser un número mayor que 0.",
+        "price": "El precio debe ser un número decimal."
+      },
+      "patch_products": {
+        "name": "El nombre del producto debe tener al menos 10 caracteres.",
+        "description": "La descripción del producto debe tener al menos 30 caracteres.",
+        "quantity": "La cantidad debe ser un número mayor que 0.",
+        "price": "El precio debe ser un número decimal."
+      }
+    },
+    "categories_rules": {
+      "post_categories": {
+        "name": "El nombre de la categoría debe tener al menos 10 caracteres.",
+        "description": "La descripción de la categoría debe tener al menos 30 caracteres."
+      },
+      "patch_categories": {
+        "name": "El nombre de la categoría debe tener al menos 10 caracteres.",
+        "description": "La descripción de la categoría debe tener al menos 30 caracteres."
+      }
+    },
+    "comments_rules": {
+      "post_comment": {
+        "body": "El comentario no debe estar vacío.",
+        "product_not_found": "El producto que está tratando de comentar no se encuentra en este momento."
+      },
+      "patch_comment": {
+        "body": "El comentario no debe estar vacío.",
+        "product_not_found": "El producto que está tratando de comentar no se encuentra en este momento."
+      }
+    }
+  },
+  "middleware": {
+    "validators": {
+      "title": "Atributo no válido"
+    },
+    "unknown_endpoint": {
+      "title": "Ruta no encontrada.",
+      "detail": "No se pudo encontrar la ruta solicitada."
+    },
+    "check_valid_object_id": {
+      "title": "ID invalida",
+      "detail": "El ID recibido no es correcto."
+    },
+    "resource_not_found": {
+      "title": "Recurso no encontrado.",
+      "detail": "No se pudo recuperar el recurso solicitado."
+    },
+    "check_valid_token": {
+      "header_without_token": {
+        "title": "Token requerido.",
+        "detail": "La solicitud se recibió sin el token requerido."
+      },
+      "token_not_valid": {
+        "title": "Token invalido.",
+        "detail": "La solicitud se recibió con un token no válido."
+      },
+      "not_authorization": {
+        "title": "No autorizado.",
+        "detail": "La solicitud está intentando realizar una acción no autorizada."
+      }
+    }
+  },
+  "services": {
+    "users_services": {
+      "get_users": {
+        "error_resource_not_found": "Los usuarios no pudieron ser procesados.",
+        "resources_get_success": "Los usuarios han sido recuperados con éxito."
+      },
+      "get_user": {
+        "error_resource_not_found": "El usuario no pudo ser procesado.",
+        "resources_get_success": "El usuario ha sido recuperado con éxito."
+      },
+      "get_user_authentication": {
+        "credential_incorrect": {
+          "title": "Credenciales incorrectas",
+          "detail": "Las credenciales de inicio de sesión del usuario (correo electrónico o contraseña) son incorrectas."
+        },
+        "user_activation_required": {
+          "title": "Su cuenta requiere activación",
+          "detail": "Le hemos enviado un correo electrónico de bienvenida que contiene un enlace para activar su cuenta. Activa tu cuenta para poder iniciar sesión."
+        },
+        "user_actived_already": {
+          "title": "Tu cuenta ya ha sido activada",
+          "detail": "Vaya al formulario de inicio de sesión para acceder a su cuenta."
+        },
+        "user_token_expired": {
+          "title": "Su token ya ha caducado o se ha utilizado",
+          "detail": "Aparentemente, su token de recuperación de contraseña ha caducado o se ha utilizado. Pide una nueva contraseña."
+        },
+        "user_code_virification_wrong": {
+          "title": "Tu enlace de verificación no es correcto",
+          "detail": "Verifique que su enlace de verificación sea correcto."
+        },
+        "user_locked": {
+          "title": "Cuenta bloqueada",
+          "detail": "Su cuenta está bloqueada, por lo que no puede iniciar sesión."
+        },
+        "authentication_success": "User has been authenticated succesfully."
+      },
+      "create_user": {
+        "method_label": "Registro de usuario",
+        "create_success": "El usuario ha sido creado con éxito."
+      },
+      "update_user": {
+        "method_label": "Actualización de usuario",
+        "update_not_found": "No se encuentra el usuario solicitado.",
+        "update_no_authorization": "El usuario no está autorizado para realizar esta acción.",
+        "update_success": "El usuario ha sido actualizado con éxito."
+      },
+      "delete_user": {
+        "delete_not_found": "No se encuentra el usuario solicitado.",
+        "delete_no_authorization": "El usuario no está autorizado para realizar esta acción.",
+        "delete_success": "El usuario ha sido eliminado con éxito."
+      }
+    },
+    "tags_services": {
+      "error_resource_not_found": "No se encuentra la etiqueta solicitada.",
+      "delete_resource_with_relation": {
+        "title": "Etiqueta con dependencia",
+        "detail": "La etiqueta que intenta eliminar tiene productos relacionados."
+      }
+    },
+    "products_services": {
+      "resource_not_found": "No se encontró el recurso solicitado.",
+      "resource_not_created": "No se pudo crear el recurso."
+    },
+    "comments_services": {
+      "error_resource_not_found": "No se encuentra el comentario solicitado."
+    },
+    "categories_services": {
+      "error_resource_not_found": "No se encuentra la categoría solicitada.",
+      "delete_resource_with_relation": {
+        "title": "Producto con dependencia",
+        "detail": "La categoría que intenta eliminar tiene productos relacionados."
+      }
+    }
+  },
+
+  "emails": {
+    "registration": {
+      "subject": "Email de bienvenida y activación de cuenta",
+      "title": "¡Te damos la bienvenida!",
+      "body": "Hola, userName: Gracias por crear una cuenta con Catalog Project. ¡Estás a unos sencillos pasos de poder empezar a disfrutar de nuestros servicios!. Solo tienes que hacer clic en el botón activar cuenta.",
+      "button_label": "Activa tu cuenta"
+    },
+    "password-reset": {
+      "subject": "Por favor, cambie su contraseña",
+      "title": " Restablecer su contraseña de Catalog",
+      "body": "userName, escuchamos que perdió su contraseña del catálogo. ¡Lo siento por eso! ¡Pero no te preocupes! Puede utilizar el siguiente botón para restablecer su contraseña.",
+      "button_label": "Restablecer su contraseña"
+    }
+  }
+}
