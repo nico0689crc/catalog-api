@@ -69,7 +69,7 @@ const patchUserRules = body => {
       })
       .custom(async (value, { req, res, next }) => {
         await User.verifyExistingEmail(value, user => {
-          if (user.email !== value) {
+          if (user) {
             return Promise.reject("Existing email");
           }
         });
