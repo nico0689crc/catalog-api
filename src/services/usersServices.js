@@ -62,8 +62,9 @@ const patchUser = async (req, res, next) => {
 const deleteUser = async (req, res, next) => {
   tryCatch(async () => {
     const { userId } = req.params;
+    const { t } = req;
 
-    await User.deleteCustom(userId);
+    await User.deleteCustom(userId, t);
 
     const response = new ResponseParser({});
     response.sendResponseDeleteSuccess(res);

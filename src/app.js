@@ -11,6 +11,7 @@ const {
   commentRoutes,
   productRoutes,
   categoryRoutes,
+  seedDbRoutes,
 } = require("../src/routes");
 const { unknownEndpoint, globalErrorHandler } = require("../src/middlewares");
 
@@ -40,6 +41,7 @@ app.use("/api/tags", tagRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/seedDb", seedDbRoutes);
 
 app.use(unknownEndpoint);
 

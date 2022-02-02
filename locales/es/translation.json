@@ -149,6 +149,18 @@
         "delete_not_found": "No se encuentra el usuario solicitado.",
         "delete_no_authorization": "El usuario no está autorizado para realizar esta acción.",
         "delete_success": "El usuario ha sido eliminado con éxito."
+      },
+      "delete_user_with_tags": {
+        "title": "Usuario con etiquetas",
+        "detail": "El Usuario que intenta eliminar tiene algunas etiquetas relacionadas."
+      },
+      "delete_user_with_categories": {
+        "title": "Usuario con categorias",
+        "detail": "El Usuario que intenta eliminar tiene algunas categorias relacionadas."
+      },
+      "delete_user_with_products": {
+        "title": "Usuario con productos",
+        "detail": "El Usuario que intenta eliminar tiene algunos products relacionadas."
       }
     },
     "tags_services": {

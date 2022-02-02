@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Nicolas 1 - User",
+    "email": "dobvikes@kuedi.mv",
+    "password": "123456",
+    "avatar": "",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 2 - User",
+    "email": "wak@uptu.ga",
+    "password": "123456",
+    "avatar": "",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 3 - User",
+    "email": "mib@awugaj.bo",
+    "password": "123456",
+    "avatar": "",
+    "role": "user",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 4 - Admin",
+    "email": "ov@na.hn",
+    "password": "123456",
+    "avatar": "",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 5 - Admin",
+    "email": "sat@kono.vg",
+    "password": "123456",
+    "avatar": "",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 6 - Admin",
+    "email": "tafoso@nuheguwi.ps",
+    "password": "123456",
+    "avatar": "",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "name": "Nicolas 7 - Admin",
+    "email": "nico.06.89crc@gmail.com",
+    "password": "REgaTAS1989!@",
+    "avatar": "",
+    "role": "admin",
+    "status": "active"
+  }
+]

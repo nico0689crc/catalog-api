@@ -149,6 +149,18 @@
         "delete_not_found": "The requested user is not found.",
         "delete_no_authorization": "The user is not authorized to perform this action.",
         "delete_success": "The user has been deleted successfully."
+      },
+      "delete_user_with_tags": {
+        "title": "User with tags",
+        "detail": "The User trying to remove have some tags related."
+      },
+      "delete_user_with_categories": {
+        "title": "User with categories",
+        "detail": "The User trying to remove have some categories related."
+      },
+      "delete_user_with_products": {
+        "title": "User with products",
+        "detail": "The User trying to remove have some products related."
       }
     },
     "tags_services": {

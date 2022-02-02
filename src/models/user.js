@@ -487,7 +487,53 @@ userSchema.statics.updateCustom = async function (
   return user;
 };
 
-userSchema.statics.deleteCustom = async function (userId) {
+userSchema.statics.deleteCustom = async function (userId, t) {
+  const Tag = require("./tag");
+  const Product = require("./product");
+  const Category = require("./category");
+
+  const tags = await Tag.findOne({ creators: userId });
+  const products = await Product.findOne({ creators: userId });
+  const categories = await Category.findOne({ creators: userId });
+  const errorsObjects = [];
+
+  if (tags) {
+    errorsObjects.push({
+      source: {
+        pointer: "related/tags",
+      },
+      title: t("services.users_services.delete_user_with_tags.title"),
+      detail: t("services.users_services.delete_user_with_tags.detail"),
+    });
+  }
+
+  if (products) {
+    errorsObjects.push({
+      source: {
+        pointer: "related/products",
+      },
+      title: t("services.users_services.delete_user_with_products.title"),
+      detail: t("services.users_services.delete_user_with_products.detail"),
+    });
+  }
+
+  if (categories) {
+    errorsObjects.push({
+      source: {
+        pointer: "related/categories",
+      },
+      title: t("services.users_services.delete_user_with_categories.title"),
+      detail: t("services.users_services.delete_user_with_categories.detail"),
+    });
+  }
+
+  if (errorsObjects.length > 0) {
+    throw new ErrorResponseParser(
+      ResponsesTypes.errors.errors_400.error_authentication_credential_incorrect,
+      errorsObjects
+    );
+  }
+
   await this.findByIdAndDelete(userId);
 
   return;

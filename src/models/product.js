@@ -98,24 +98,18 @@ productSchema.statics.createCustomTesting = async function (attributes) {
   const User = require("./user");
   const relatedCollections = this.getRelatedColletions();
 
-  const slug = `${slugify(attributes.name, {
-    lower: true,
-    remove: /[*+~.()'"!:@]/g,
-  })}-${uuidv4()}`;
-
   const images = [];
 
   for (const image of attributes.images) {
     images.push({
-      original: { url: image },
-      thumbnail: { url: image },
+      original: { url: image.original },
+      thumbnail: { url: image.thumbnail },
     });
   }
 
   const product = await this.create({
     ...attributes,
     images,
-    slug,
   });
 
   await Tag.updateMany(

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --detectOpenHandles",
     "start": "nodemon index.js"
   },
   "author": "",
@@ -24,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.14",
     "multer": "^1.4.4",
+    "random-number-in-range": "^1.0.2",
     "slugify": "^1.6.4",
     "uuid": "^8.3.2"
   },

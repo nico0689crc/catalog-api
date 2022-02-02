@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Fruits & Vegetables",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "FruitsVegetable",
+    "slug": "fruits-vegetables"
+  },
+  {
+    "name": "Meat & Fish",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "MeatFish",
+    "slug": "meat-fish"
+  },
+  {
+    "name": "Snacks",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "Snacks",
+    "slug": "snacks"
+  },
+  {
+    "name": "Pet Care",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "PetCare",
+    "slug": "pet-care"
+  },
+  {
+    "name": "Home & Cleaning",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "HomeCleaning",
+    "slug": "home-cleaning"
+  },
+  {
+    "name": "Dairy",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "Dairy",
+    "slug": "dairy"
+  },
+  {
+    "name": "Cooking",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "Cooking",
+    "slug": "cooking"
+  },
+  {
+    "name": "Breakfast",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "Breakfast",
+    "slug": "breakfast"
+  },
+  {
+    "name": "Beverage",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "Beverage",
+    "slug": "beverage"
+  },
+  {
+    "name": "Health & Beauty",
+    "description": "Laboris ipsum deserunt commodo incididunt ut anim. Magna quis sit anim dolore consequat. Quis velit do amet Lorem duis dolor elit eu pariatur est duis aliqua amet magna. Eu deserunt adipisicing tempor sint aliquip labore anim dolore consectetur qui do. Laborum occaecat ex quis reprehenderit consequat cillum ut ad id et ea Lorem sunt do. Adipisicing ullamco ex occaecat exercitation culpa deserunt mollit culpa cillum sit incididunt aliquip do ipsum. Ad laboris dolore amet reprehenderit.",
+    "icon": "BeautyHealth",
+    "slug": "health-beauty"
+  }
+]

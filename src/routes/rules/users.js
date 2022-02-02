@@ -68,8 +68,10 @@ const patchUserRules = body => {
         );
       })
       .custom(async (value, { req, res, next }) => {
-        await User.verifyExistingEmail(value, user => {
-          if (user) {
+        await User.verifyExistingEmail(value, async user => {
+          const userToModify = await User.findById(req.params.userId);
+
+          if (user && userToModify.id !== user.id) {
             return Promise.reject("Existing email");
           }
         });
