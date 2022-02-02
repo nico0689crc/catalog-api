@@ -75,9 +75,8 @@ const seedProducts = async (usersCreated, tagsCreated) => {
   const productsCreated = [];
 
   for (product of productsData) {
-    if (product.category_slug !== null) {
-      const category = await Category.findOne({ slug: product.category_slug });
-
+    const category = await Category.findOne({ slug: product.category_slug });
+    if (category) {
       const productAux = {
         ...product,
         categories: category.id,
