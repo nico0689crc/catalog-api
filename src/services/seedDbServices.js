@@ -80,7 +80,7 @@ const seedProducts = async (usersCreated, tagsCreated) => {
 
       const productAux = {
         ...product,
-        categories: category._id,
+        categories: category.id,
         tags: [
           tagsCreated[rando(0, 8)].id,
           tagsCreated[rando(0, 8)].id,
