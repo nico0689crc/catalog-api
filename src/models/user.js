@@ -670,7 +670,6 @@ userSchema.statics.register = async function (attributes, t, testing = false) {
     const body = t("emails.registration.body").replace(/userName/, user.name);
     const button_label = t("emails.registration.button_label");
     const linkActivation = `${attributes.redirectionUrl}?confirmationCode=${confirmationCode}&userId=${user._id}`;
-
     const params = {
       title,
       body,

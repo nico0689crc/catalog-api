@@ -14,7 +14,6 @@ const getStringConnection = testing => {
   const databaseName = testing ? config.databaseTesting : config.database;
 
   const string = `mongodb://${config.username}:${config.password}@${config.clusterName}:27017/${databaseName}?authSource=admin&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&directConnection=true&ssl=false`;
-  console.log(string);
   return string;
 };
 
