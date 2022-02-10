@@ -5,7 +5,6 @@ const { Category, Product } = require("../models");
 const getCategories = async (req, res, next) => {
   tryCatch(async () => {
     const { page, filter: filters, sort } = req.query;
-
     const { totalCategories, categories } = await Category.findCustom({
       page,
       filters,

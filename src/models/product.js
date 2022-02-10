@@ -27,6 +27,7 @@ const productSchema = new Schema(
     ],
     quantity: { type: Number, min: 0, default: 0 },
     price: { type: Number, min: 0, default: 0 },
+    sale_price: { type: Number, min: 0, default: 0 },
     slug: { type: String, default: null },
     active: { type: Boolean, default: true },
     tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
@@ -69,7 +70,7 @@ productSchema.statics.getFieldsToSelect = function () {
     "images",
     "quantity",
     "price",
-    "price_sale",
+    "sale_price",
     "discount",
     "slug",
     "active",
@@ -86,6 +87,7 @@ productSchema.statics.findCustom = async function (query) {
 productSchema.statics.findByIdCustom = async function (productId) {
   const relatedCollections = this.getRelatedColletions();
   const product = await this.findById(productId);
+  console.log(product);
 
   await this.populate(product, relatedCollections);
 

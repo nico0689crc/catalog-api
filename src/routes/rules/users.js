@@ -9,13 +9,6 @@ const getUserAuthenticationRules = body => {
           "validation_rules.users_rules.get_user_authentication.email"
         );
       }),
-    body("password")
-      .isLength({ min: 6 })
-      .withMessage((value, { req }) => {
-        return req.t(
-          "validation_rules.users_rules.get_user_authentication.password"
-        );
-      }),
   ];
 };
 
