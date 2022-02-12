@@ -87,7 +87,6 @@ productSchema.statics.findCustom = async function (query) {
 productSchema.statics.findByIdCustom = async function (productId) {
   const relatedCollections = this.getRelatedColletions();
   const product = await this.findById(productId);
-  console.log(product);
 
   await this.populate(product, relatedCollections);
 
