@@ -213,7 +213,7 @@ class ResponseParser {
     this.response = {
       links: getLinks(),
       api: {
-        items_total: this.totalDocuments,
+        items_total: this.totalDocuments ?? 0,
       },
       data: [],
     };

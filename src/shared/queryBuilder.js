@@ -50,8 +50,8 @@ class QueryBuilder {
         element[`$${operator}`] = values;
       } else if (operator === "contain") {
         element[`$regex`] = values;
+        element[`$options`] = "i";
       }
-
       return element;
     };
 
@@ -60,12 +60,20 @@ class QueryBuilder {
       return;
     }
 
-    this.matchStage = { $match: {} };
+    this.matchStage = { $match: { $and: [] } };
 
     for (const fieldName in this.filters) {
-      this.matchStage["$match"] = {
-        [fieldName]: getFilteringElement(this.filters[fieldName]),
-      };
+      if (Array.isArray(this.filters[fieldName])) {
+        for (const index in this.filters[fieldName]) {
+          this.matchStage["$match"]["$and"].push({
+            [fieldName]: getFilteringElement(this.filters[fieldName][index]),
+          });
+        }
+      } else {
+        this.matchStage["$match"]["$and"].push({
+          [fieldName]: getFilteringElement(this.filters[fieldName]),
+        });
+      }
     }
 
     this.aggregateQuery.push(this.matchStage);

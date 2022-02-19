@@ -79,6 +79,7 @@ productSchema.statics.getFieldsToSelect = function () {
 
 productSchema.statics.findCustom = async function (query) {
   const queryBuider = new QueryBuilder(this, query);
+
   const { countDocuments: totalProducts, documents: products } =
     await queryBuider.getCollections();
   return { totalProducts, products };
