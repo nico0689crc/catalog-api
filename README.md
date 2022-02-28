@@ -75,7 +75,7 @@ db.createUser({
 -- Once installed the project dependencies is necessary to create a .env file in the `root` directory. 
 -- You can copy the content of ".env.template" from the root directory and replace it with your data.
 <br>
-``
+```
 DB_USER_NAME=[Database userName created previously]
 DB_PASSWORD=[Password assigned to the userName]
 DB_CLUSTER_NAME=[IP where the DB server is running]
@@ -90,7 +90,7 @@ JWT_EXPIRATION_TIME=1h
 <br>
 SENDGRID_API_KEY=[SENDGRID API KEY]
 SENDGRID_EMAIL_FROM=[SENDGRID EMAIL VERIFIED]
-``
+```
 <br>
 
 ### `npm start`
