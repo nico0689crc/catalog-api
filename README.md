@@ -73,7 +73,7 @@ db.createUser({
 `npm install`
 
 -- Once installed the project dependencies is necessary to create a .env file in the `root` directory. 
--- You can copy the content of ".env.template" from the root directory and replace it with your data.
+-- You can copy the content of `.env.template` from the root directory and replace it with your data.
 <br>
 ```
 DB_USER_NAME=[Database userName created previously]
