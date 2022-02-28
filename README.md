@@ -36,7 +36,7 @@ For getting started with the project you have to follow the below procedure.
 -- Install MongoDb. Follow these installation steps with your current operative system. https://docs.mongodb.com/manual/installation
 -- Create an user with a password that be able to access the database.
 <br>
-How to do that?
+`How do you do that?`
 <br>
 https://docs.mongodb.com/manual/tutorial/create-users/
 <br>
