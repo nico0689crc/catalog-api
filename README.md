@@ -80,14 +80,14 @@ DB_USER_NAME=[Database userName created previously]
 DB_PASSWORD=[Password assigned to the userName]
 DB_CLUSTER_NAME=[IP where the DB server is running]
 DB_DATABASE_NAME=[Database name]
-<br>
+
 API_URL_BASE=[IP and PORT where this API is running follow by /api - For example: http://192.168.1.4:3300/api]
 SERVER_URL_BASE=[IP and PORT where this API is running without /api - For example: http://192.168.1.4:3300/api]
 RUNNING_PORT=3300
-<br>
+
 JWT_KEY=[JWT SECRET KEY]
 JWT_EXPIRATION_TIME=1h
-<br>
+
 SENDGRID_API_KEY=[SENDGRID API KEY]
 SENDGRID_EMAIL_FROM=[SENDGRID EMAIL VERIFIED]
 ```
