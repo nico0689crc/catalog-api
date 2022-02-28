@@ -43,6 +43,7 @@ https://docs.mongodb.com/manual/tutorial/create-users/
 You can run this commands to create differents users with propers roles.
 <br><br>
 `Admin Role`
+```
 db.createUser({
       user: [userName],
       pwd: [password],
@@ -52,8 +53,10 @@ db.createUser({
                 { role: "dbAdminAnyDatabase",   db: "admin" }
              ]
   });
+```
   <br><br>
-  `User of catalog DB`
+`User of catalog DB`
+```
     db.createUser({
       user: [userName],
       pwd: [password],
@@ -63,7 +66,7 @@ db.createUser({
                 { role: "readWrite", db: "catalog_production" }
              ]
   });
-
+```
 -- Create a Sendgrid Account. It is necessary to have API KEY and Email address verified
 
 -- Run the follow command to install npm packages dependencies: 
