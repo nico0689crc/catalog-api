@@ -5,7 +5,6 @@ const config = {
   username: process.env.DB_USER_NAME,
   password: process.env.DB_PASSWORD,
   clusterName: process.env.DB_CLUSTER_NAME,
-  clusterNameLocal: process.env.DB_CLUSTER_NAME_LOCAL,
   database: process.env.DB_DATABASE_NAME,
   databaseTesting: process.env.DB_DATABASE_NAME_TEST,
 };

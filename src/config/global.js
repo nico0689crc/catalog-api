@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const globalConfig = {
   port: process.env.RUNNING_PORT,
-  api_url_base: `${process.env.API_URL_BASE}/api`,
+  api_url_base: `${process.env.SERVER_URL_BASE}/api`,
   server_url_base: `${process.env.SERVER_URL_BASE}`,
   jwt_key: process.env.JWT_KEY,
   jwt_expiration_time: process.env.JWT_EXPIRATION_TIME,
