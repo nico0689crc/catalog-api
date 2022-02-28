@@ -33,14 +33,14 @@ Individual Category Endpoint: http://catalog-api.nicolasfernandez.online/api/cat
 
 For getting started with the project you have to follow the below procedure. 
 
--- Install MongoDb. Follow this installation steps with your current operative system. https://docs.mongodb.com/manual/installation
--- Create an user with password that be able to access the database.
+-- Install MongoDb. Follow these installation steps with your current operative system. https://docs.mongodb.com/manual/installation
+-- Create an user with a password that be able to access the database.
 <br>
 How to do that?
 <br>
 https://docs.mongodb.com/manual/tutorial/create-users/
 <br>
-You can run this commands to create differents users with propers roles.
+You can run these commands to create different users with propers roles.
 <br><br>
 `Admin Role`
 ```
@@ -61,18 +61,36 @@ db.createUser({
       user: [userName],
       pwd: [password],
       roles: [
-                { role: "userAdmin", db: "catalog_production" },
-                { role: "dbAdmin",   db: "catalog_production" },
-                { role: "readWrite", db: "catalog_production" }
+                { role: "userAdmin", db: "catalog" },
+                { role: "dbAdmin",   db: "catalog" },
+                { role: "readWrite", db: "catalog" }
              ]
   });
 ```
 -- Create a Sendgrid Account. It is necessary to have API KEY and Email address verified
 
--- Run the follow command to install npm packages dependencies: 
+-- Run the following command to install npm packages dependencies: 
 `npm install`
 
--- Once installed the project dependencies is necessary to create a .env file in the `root` directory. You can copy the content of ".env.template" from the root directory and replace with your own data.
+-- Once installed the project dependencies is necessary to create a .env file in the `root` directory. 
+-- You can copy the content of ".env.template" from the root directory and replace it with your data.
+<br>
+``
+DB_USER_NAME=[Database userName created previously]
+DB_PASSWORD=[Password assigned to the userName]
+DB_CLUSTER_NAME=[IP where the DB server is running]
+DB_DATABASE_NAME=[Database name]
+<br>
+API_URL_BASE=[IP and PORT where this API is running follow by /api - For example: http://192.168.1.4:3300/api]
+SERVER_URL_BASE=[IP and PORT where this API is running without /api - For example: http://192.168.1.4:3300/api]
+RUNNING_PORT=3300
+<br>
+JWT_KEY=[JWT SECRET KEY]
+JWT_EXPIRATION_TIME=1h
+<br>
+SENDGRID_API_KEY=[SENDGRID API KEY]
+SENDGRID_EMAIL_FROM=[SENDGRID EMAIL VERIFIED]
+``
 <br>
 
 ### `npm start`
