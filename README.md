@@ -19,7 +19,7 @@ Individual Category Endpoint: http://catalog-api.nicolasfernandez.online/api/cat
 
 # Tech I Have Used
 
-- NodoJs
+- NodeJs
 - ExpressJs
 - Sendgrid Api Integration
 - MongoDb
@@ -31,7 +31,40 @@ Individual Category Endpoint: http://catalog-api.nicolasfernandez.online/api/cat
 
 # Getting Started & Installation
 
-- For getting started with the project you have to follow the below procedure. 
+For getting started with the project you have to follow the below procedure. 
+
+-- Install MongoDb. Follow this installation steps with your current operative system. https://docs.mongodb.com/manual/installation
+-- Create an user with password that be able to access the database.
+<br>
+How to do that?
+<br>
+https://docs.mongodb.com/manual/tutorial/create-users/
+<br>
+You can run this commands to create differents users with propers roles.
+<br><br>
+`Admin Role`
+db.createUser({
+      user: [userName],
+      pwd: [password],
+      roles: [
+                { role: "userAdminAnyDatabase", db: "admin" },
+                { role: "readWriteAnyDatabase", db: "admin" },
+                { role: "dbAdminAnyDatabase",   db: "admin" }
+             ]
+  });
+  <br><br>
+  `User of catalog DB`
+    db.createUser({
+      user: [userName],
+      pwd: [password],
+      roles: [
+                { role: "userAdmin", db: "catalog_production" },
+                { role: "dbAdmin",   db: "catalog_production" },
+                { role: "readWrite", db: "catalog_production" }
+             ]
+  });
+
+-- Create a Sendgrid Account. It is necessary to have API KEY and Email address verified
 
 -- Run the follow command to install npm packages dependencies: 
 `npm install`
